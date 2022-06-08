@@ -12,6 +12,7 @@ const storage = multer.diskStorage({
     cb(null, file.fieldname + '_' + Date.now())
   }
 });
+
 // Exporta a instância configurada
 export default multer({
   storage: storage, fileFilter: function (_req, file, callback) {
